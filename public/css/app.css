@@ -1,0 +1,103 @@
+/* Sorbetería Sarita: rojo Sarita, blanco y un toque de amarillo (paleta del sitio heladosarita.com) */
+:root {
+  --rojo: #e81d2c; --rojo-osc: #c4141f; --vino: #6b2a38; --amarillo: #ffe600;
+  --fondo: #fff7f7; --rosa: #ffe1e3; --papel: #fff; --tinta: #3a2a2e; --suave: #6e5e62; --linea: #f3d6d9;
+  --ok: #1f7a3d; --error: #c4141f;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); min-height: 100vh; display: flex; flex-direction: column; }
+a { color: var(--rojo-osc); }
+h1, h2, .boton, .marca-texto strong, .precio, .pie-lema { font-family: "Montserrat", system-ui, sans-serif; }
+
+.barra { background: var(--rojo); color: #fff; box-shadow: 0 2px 0 var(--rojo-osc); }
+.barra-in { width: min(1180px, 100% - 2rem); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .7rem 0; }
+.marca { display: flex; align-items: center; gap: .9rem; color: #fff; text-decoration: none; }
+.marca img { height: 62px; width: auto; display: block; }
+.marca-texto strong { display: block; font-size: 1.15rem; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; }
+.marca-texto small { display: block; color: #ffd3d6; font-size: .8rem; }
+
+.contenido { width: min(1180px, 100% - 2rem); margin: 1.75rem auto; flex: 1; }
+h1 { font-size: 1.7rem; font-weight: 800; color: var(--rojo); margin: 0 0 .35rem; }
+
+.boton { display: inline-flex; align-items: center; justify-content: center; padding: .6rem 1.2rem; border: 0; border-radius: 999px; background: var(--rojo); color: #fff; font-size: .92rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .15s; }
+.boton:hover { background: var(--rojo-osc); }
+.boton-amarillo { background: var(--amarillo); color: var(--vino); }
+.boton-amarillo:hover { background: #fff; }
+.boton-sec { background: var(--papel); color: var(--rojo); border: 2px solid var(--rojo); padding: .45rem 1rem; }
+.boton-sec:hover { background: var(--rosa); }
+
+.portada { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1.25rem; }
+.portada p { margin: 0; color: var(--suave); }
+.resumen { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0; }
+.resumen div { background: var(--papel); border: 1px solid var(--linea); border-radius: 14px; padding: .55rem 1rem; min-width: 104px; }
+.resumen dt { color: var(--suave); font-size: .75rem; }
+.resumen dd { margin: 0; font: 800 1.35rem "Montserrat", sans-serif; color: var(--vino); }
+.alerta { color: var(--error) !important; font-weight: 700; }
+
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-bottom: 1.25rem; }
+.filtros input { flex: 1 1 260px; max-width: 420px; }
+.filtros select { flex: 0 1 220px; }
+.limpiar { font-size: .9rem; }
+input, select, textarea { font: inherit; padding: .55rem .75rem; border: 1.5px solid var(--linea); border-radius: 12px; background: #fff; width: 100%; color: var(--tinta); }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--rojo); outline-offset: 1px; border-color: transparent; }
+
+.rejilla { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.1rem; }
+.tarjeta { background: var(--papel); border-radius: 20px; overflow: hidden; box-shadow: 0 6px 18px rgb(232 29 44 / .08); border: 1px solid var(--linea); display: flex; flex-direction: column; }
+.foto { position: relative; aspect-ratio: 4 / 3; background: var(--rosa); display: grid; place-items: center; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sin-foto { color: var(--suave); font-size: .85rem; }
+.chip { position: absolute; top: .7rem; left: .7rem; background: var(--rojo); color: #fff; font-size: .72rem; font-weight: 700; padding: .2rem .65rem; border-radius: 999px; }
+.tarjeta-cuerpo { padding: .85rem 1rem .5rem; flex: 1; }
+.tarjeta-cuerpo code { font-size: .72rem; color: var(--suave); }
+.tarjeta h2 { font-size: 1.02rem; font-weight: 700; margin: .15rem 0 .3rem; color: var(--tinta); }
+.tarjeta p { font-size: .85rem; color: var(--suave); margin: 0 0 .5rem; }
+.precio-fila { display: flex; justify-content: space-between; align-items: baseline; }
+.precio { font-size: 1.25rem; font-weight: 800; color: var(--rojo); }
+.stock { font-size: .8rem; color: var(--ok); }
+.acciones { display: flex; justify-content: space-between; align-items: center; padding: .5rem 1rem 1rem; }
+.acciones form { margin: 0; }
+.enlace-peligro { background: none; border: 0; padding: 0; color: var(--error); font: inherit; font-size: .88rem; text-decoration: underline; cursor: pointer; }
+.vacio { text-align: center; color: var(--suave); padding: 3rem 1rem; background: var(--papel); border-radius: 20px; }
+.paginas { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; color: var(--suave); }
+
+.aviso { padding: .75rem 1.1rem; border-radius: 14px; margin: 0 0 1.1rem; }
+.aviso-ok { background: #e4f4e9; color: var(--ok); }
+.aviso-error { background: #fde3e5; color: var(--error); padding-left: 2.1rem; }
+
+.panel { background: var(--papel); border: 1px solid var(--linea); border-radius: 20px; padding: 1.4rem; margin-top: 1rem; }
+.formulario { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 760px; }
+.formulario label { display: flex; flex-direction: column; gap: .35rem; font-weight: 600; font-size: .88rem; }
+.formulario label.check { flex-direction: row; align-items: center; font-weight: 500; }
+.check input { width: auto; }
+.ancho { grid-column: 1 / -1; }
+.campo-foto { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+.foto-grande { width: 170px; aspect-ratio: 1; border-radius: 18px; overflow: hidden; flex: none; }
+.foto-controles { display: flex; flex-direction: column; gap: .5rem; flex: 1 1 260px; }
+.foto-controles small { color: var(--suave); }
+.botones { display: flex; gap: .6rem; justify-content: flex-end; }
+
+.pie { background: var(--vino); color: #f6dfe2; font-size: .8rem; }
+.pie-in { width: min(1180px, 100% - 2rem); margin: 0 auto; padding: 1.1rem 0; }
+.pie-lema { margin: 0 0 .5rem; font-weight: 800; font-size: 1rem; color: var(--amarillo); }
+.pie-titulo { font-weight: 700; color: #fff; }
+.stack { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: .4rem 0 .6rem; padding: 0; }
+.stack b { color: #fff; }
+.pie-nota { margin: 0; opacity: .75; }
+
+@media (max-width: 640px) {
+  .formulario { grid-template-columns: 1fr; }
+  .barra-in { flex-wrap: wrap; }
+  .marca img { height: 48px; }
+  .marca-texto small { display: none; }
+  .rejilla { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .tarjeta { border-radius: 16px; }
+  .tarjeta-cuerpo { padding: .7rem .75rem .4rem; }
+  .tarjeta h2 { font-size: .92rem; }
+  .tarjeta p { display: none; }
+  .precio { font-size: 1.05rem; }
+  .acciones { padding: .4rem .75rem .8rem; gap: .4rem; flex-wrap: wrap; }
+  .acciones .boton-sec { padding: .3rem .8rem; font-size: .82rem; }
+  .resumen div { min-width: 0; flex: 1 1 40%; }
+}
