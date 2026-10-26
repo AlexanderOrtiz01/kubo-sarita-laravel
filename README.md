@@ -10,7 +10,7 @@ bombas, pasteles y malteadas) con **foto por producto**, búsqueda, filtro por c
 |---|---|
 | Stack | PHP 8.4 · Laravel 12 · Apache 2.4 · MySQL 8.4 (base administrada por Kubo) |
 | URL pública | El subdominio que asigne Kubo (por ejemplo `https://sarita.kubo.dpdns.org`) |
-| Despliegue | Kubo vigila la rama `main`: cada `git push` construye la imagen con este `Dockerfile` y la despliega |
+| Despliegue | Kubo vigila la rama `main`: cada `git push` construye la imagen con este `Dockerfile` y la despliega en menos de 1 minuto de detectarlo (sin configurar nada en GitHub) |
 
 ## Variables de entorno
 
